@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici Lletres Repetides</title>
+    <style>
+        div.resultat{
+            padding-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercici Lletres Repetides</h1>
+
+    <p><strong> L’exercici consisteix en mostrar per consola quantes vegades apareix cada lletra del teu nom i cognoms amb diferents variants (fases).</strong></p>
+    
+    <h3>FASE1</h3>
+    <ul>
+        <li>Crea un array amb el teu nom on cada posició correspongui a una lletra.</li>
+        <li>Fes un bucle que recorri aquest array i mostri per consola cadascuna de les lletres.</li>
+    </ul>
+
+    <div class="resultat">
+        <label for="nomFase1">Introdueix el teu nom: <input type="text" id="nomFase1" /></label><br>
+        <input type="button" onClick="arrayNom()" Value="continuar"/>
+    </div>
+
+    <h3>FASE 2</h3> 
+    <ul>
+       <li>Al bucle, si la lletra és una vocal imprimeix a la consola: ‘He trobat la VOCAL: __’. Sinó, imprimeix: ‘He trobat la CONSONTANT: __’.</li>
+       <li>Si trobes un numero, mostra per pantalla: ‘Els noms de persones no contenen el número: __’.</li>
+    </ul>
+
+    <div class="resultat">
+        <label for="nomFase2">Introdueix el teu nom: <input type="text" id="nomFase2" /></label><br>
+        <input type="button" onClick="arrayVocal()" Value="continuar"/>
+    </div>
+
+    <h3>FASE 3</h3> 
+    <ul>
+       <li>Emmagatzemar en un Map tant les lletres de la llista (o array) com el nombre de vegades que apareixen.</li>
+    </ul>
+
+    <div class="resultat">
+        <label for="nomFase3">Introdueix el teu nom: <input type="text" id="nomFase3" /></label><br>
+        <input type="button" onClick="arrayComptar()" Value="continuar"/>
+    </div>
+
+    <h3>FASE 4</h3> 
+    <ul>
+       <li>Crea una altra llista amb el teu cognom on cada posició correspongui a una lletra.</li>
+       <li>Fusiona les dues llistes en una sola. A més, afegeix una posició amb un espai buit entre la primera i la segona. 
+        És a dir, partim de la llista name i surname i al acabar l’execució només tindrem una que es dirà fullName.</li>
+    </ul>
+
+    <div class="resultat">
+        <label for="nomFase4">Introdueix el teu Nom: <input type="text" id="nomFase4" /></label><br>
+        <label for="nomFase4">Introdueix el teu Cognom: <input type="text" id="cognomFase4" /></label><br>
+        <input type="button" onClick="arrayNomCognom()" Value="continuar"/>
+    </div>
+    
+    
+<script src="script.js"></script> 
+</body>
+</html>
