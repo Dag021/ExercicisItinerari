@@ -1,0 +1,338 @@
+/* ************************************************************************** */
+/* ******************************* General Porpouse  ************************ */
+/* ************************************************************************** */
+/*
+    GoogleFonts:
+    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Homemade Apple', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+*/
+@font-face {
+    font-family: 'treasureMapFont';
+    src: url(fonts/Treamd.ttf);
+}
+html *{ 
+    box-sizing: border-box; 
+    font-family: 'Gloria Hallelujah', cursive;
+    text-decoration: none;
+} 
+h1, h2, h3, h4, h5, h6 {
+   font-family: 'Luckiest Guy';
+}
+span.signature {
+    font-family: 'Homemade Apple', cursive;
+}
+span.maptext{
+    font-family: 'treasureMapFont';
+} 
+body{
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+}
+a:hover{
+    text-decoration: none;
+    color: #cccccc;
+}
+img.responsive, #circleStyles.responsive{ 
+    max-width: 100%; 
+    height: auto; 
+}
+img.center, #circleStyles.responsive { 
+    display:block; 
+    margin : 0px auto;
+}
+/* ************************************************************************** */
+/* ******************************* Header *********************************** */
+/* ************************************************************************** */
+
+header{
+    background-image: url("../img/beer.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+  }
+header h1{
+    font-size: 3.5em;
+} 
+header h4 span.signature {
+    padding-left: 15px;
+    color: #6c757d;
+    font-size: 0.9em;
+}
+header * {
+    color: #eeeeee;
+}
+header .row {
+    min-height: 170px;
+}
+header #logoHeader{
+    width: 150px;
+}
+/* ************************************************************************** */
+/* ******************************* Nav ************************************** */
+/* ************************************************************************** */
+
+#navbar {
+    z-index: 1000;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .content {
+    padding-top: 60px;
+}
+#navbar a.nav-link{
+    font-family: 'Luckiest Guy';
+    font-size: 2em;
+    padding: 8px 16px 4px;  
+}
+.logoNav{
+    width: 65px;
+    visibility: hidden;
+    opacity: 1;
+    transition: visibility 1s linear,opacity 1s linear;
+    -moz-transition: visibility 1s linear,opacity 1s linear;
+    -webkit-transition: visibility 1s linear,opacity 1s linear;
+    -o-transition: visibility 1s linear,opacity 1s linear;
+}  
+#openFlags{
+    max-width: 6em;
+    min-width: 0px;
+}
+/* ************************************************************************** */
+/* ******************************* Section breadcrumb *********************** */
+/* ************************************************************************** */
+
+section span.labelBreadcrumb{
+    font-family: 'Luckiest Guy';
+    font-size: 1em;
+    color: #000000;
+    padding: 0 15px;
+}
+section .breadcrumb{
+    background-color: transparent;
+}  
+section .breadcrumb li{
+    font-family: 'Luckiest Guy';
+    font-size: 1.5em;
+}
+section .breadcrumb li a{
+    font-family: 'Luckiest Guy';
+    font-size: 1em;
+    color: #aaaaaa;
+}
+section .breadcrumb li a:hover{
+    font-family: 'Luckiest Guy';
+    font-size: 1em;
+    color: #bbbbbb;
+}
+  
+/* ************************************************************************** */
+/* ******************************* Section Contain ************************** */
+/* ************************************************************************** */
+
+section .sectionContain{
+    margin: 75px 0px;
+    min-height: 700px;
+} 
+section h2.tittleSection{
+    font-weight: bolder;
+    font-size: 70px; 
+}
+
+#questionCasification{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    height: fit-content;
+
+}
+#questionCasification div{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3vw;
+    padding-right: 20px;
+}
+/**************** select icon *********************/
+section ul#iconSelect{
+    border: 2.5px solid #000000;
+    width: 79px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    transition: width 2s;
+}
+section ul#iconSelect li {
+    padding: 0px 15px 10px;
+}
+section ul#iconSelect li i{
+    font-size: 40px;
+}
+section ul#iconSelect li i{
+    position: relative;
+    left: -10px;
+}
+section ul#iconSelect::after{
+    content: url(../img/right.png);
+    position: relative;
+    top: -10px;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 5s;
+}
+section ul#iconSelect:hover li i{
+    left: 1.5px;
+}
+section ul#iconSelect:hover::after{
+    display: "";
+    visibility: hidden;
+    opacity: 0;
+}
+section ul#iconSelect:hover{
+    padding-bottom: 15 px;
+    width: 227px;
+}
+section ul#iconSelect:hover li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+section ul#iconSelect li:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+section ul#iconSelect li#iconStar, 
+section ul#iconSelect li#iconHeart {
+    display: none;
+}
+/********************** Clasificación ************************/
+section form {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+section form input[type="radio"] {
+    display: none;
+}
+section form label{
+    font-size: 100px;
+    color:  rgba(0, 0, 0, 0.5);
+}
+section form .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    width: fit-content;
+    margin: 0 auto 30px;
+    padding: 1% 1% 0;
+    display: table;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+section form label:hover,
+section form label:hover ~ label {
+    color: hsla(51, 97%, 48%, 0.864);
+}
+section form input[type="radio"]:checked ~ label {
+     color:  hsla(51, 97%, 48%, 0.864);
+}  
+section form i.fas {
+    font-size: 8.5vw;
+    padding: 10px 7px 0px;     
+}
+/*********************** Result **********************************/
+
+section form button#buttonEnviar {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 12px 24px 6px;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+section form #blockThanks{
+    display: none;
+}
+
+section form #blockThanks h3{
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+section form #blockThanks #blocResultValoracion{
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 20px 30px 15px;
+    border-radius: 20px;
+}
+section form #blockThanks #blocResultValoracion #resultValoracion{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 70px;
+    padding: 10px;
+    position: relative;
+    top: 10px;
+}
+section form #blockThanks #blocResultValoracion #iconValoracion{
+    position: relative;
+    top: -10px;
+}
+/* ************************************************************************** */
+/* ******************************* Footer *********************************** */
+/* ************************************************************************** */
+footer .container-fluid{
+    padding-top: 20px;
+}
+footer div.xarxes i{
+    color: #eeeeee;
+}
+footer div.xarxes i:hover{
+    color: #cccccc;
+}
+footer .xarxes {
+    text-align: center;
+}
+
+/* ************************************************************************** */
+/* ******************************** Media *********************************** */
+/* ************************************************************************** */
+
+@media only screen and (max-width: 1000px) {
+    #questionCasification{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #questionCasification div{
+        font-size: 4vw;
+    }
+}
+@media only screen and (max-width: 600px) {
+    section form {
+        width: 100%;
+    }
+    section form #beerClasificacion {
+        width: 100%;
+    }
+    section form i.fas {
+        font-size: 14.5vw;
+        padding: 10px 7px 0px;
+    }
+    #questionCasification div{
+        font-size: 6vw;
+    }
+}
+

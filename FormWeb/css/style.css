@@ -1,0 +1,220 @@
+/* ************************************************************************** */
+/* ******************************* General Porpouse  ************************ */
+/* ************************************************************************** */
+/*
+    GoogleFonts:
+    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Homemade Apple', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+*/
+@font-face {
+    font-family: 'treasureMapFont';
+    src: url(fonts/Treamd.ttf);
+}
+html *{ 
+    box-sizing: border-box; 
+    font-family: 'Gloria Hallelujah', cursive;
+    text-decoration: none;
+} 
+h1, h2, h3, h4, h5, h6 {
+   font-family: 'Luckiest Guy';
+}
+span.signature {
+    font-family: 'Homemade Apple', cursive;
+}
+span.maptext{
+    font-family: 'treasureMapFont';
+} 
+body{
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+}
+a:hover{
+    text-decoration: none;
+    color: #cccccc;
+}
+img.responsive, #circleStyles.responsive{ 
+    max-width: 100%; 
+    height: auto; 
+}
+img.center, #circleStyles.responsive { 
+    display:block; 
+    margin : 0px auto;
+}
+/* ************************************************************************** */
+/* ******************************* Header *********************************** */
+/* ************************************************************************** */
+
+header{
+    background-image: url("../img/beer.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+  }
+header h1{
+    font-size: 3.5em;
+} 
+header h4 span.signature {
+    padding-left: 15px;
+    color: #6c757d;
+    font-size: 0.9em;
+}
+header * {
+    color: #eeeeee;
+}
+header .row {
+    min-height: 170px;
+}
+header #logoHeader{
+    width: 150px;
+}
+/* ************************************************************************** */
+/* ******************************* Nav ************************************** */
+/* ************************************************************************** */
+
+#navbar {
+    z-index: 1000;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .content {
+    padding-top: 60px;
+}
+#navbar a.nav-link{
+    font-family: 'Luckiest Guy';
+    font-size: 2em;
+    padding: 8px 16px 4px;  
+}
+.logoNav{
+    width: 65px;
+    visibility: hidden;
+    opacity: 1;
+    transition: visibility 1s linear,opacity 1s linear;
+    -moz-transition: visibility 1s linear,opacity 1s linear;
+    -webkit-transition: visibility 1s linear,opacity 1s linear;
+    -o-transition: visibility 1s linear,opacity 1s linear;
+}  
+#openFlags{
+    max-width: 6em;
+    min-width: 0px;
+}
+/* ************************************************************************** */
+/* ******************************* Section breadcrumb *********************** */
+/* ************************************************************************** */
+
+section span.labelBreadcrumb{
+    font-family: 'Luckiest Guy';
+    font-size: 1em;
+    color: #000000;
+    padding: 0 15px;
+}
+section .breadcrumb{
+    background-color: transparent;
+}  
+section .breadcrumb li{
+    font-family: 'Luckiest Guy';
+    font-size: 1.5em;
+}
+section .breadcrumb li a{
+    font-family: 'Luckiest Guy';
+    font-size: 1em;
+    color: #aaaaaa;
+}
+section .breadcrumb li a:hover{
+    font-family: 'Luckiest Guy';
+    font-size: 1em;
+    color: #bbbbbb;
+}
+  
+  /* ************************************************************************** */
+/* ******************************* Section Contain ************************** */
+/* ************************************************************************** */
+
+
+section .sectionContain{
+    margin: 75px 0px;
+    min-height: 700px;
+} 
+section h2.tittleSection{
+    font-weight: bolder;
+    font-size: 70px; 
+}
+
+/* ************************************************************************** */
+/* ******************************* Form ************************************* */
+/* ************************************************************************** */
+
+section .form_tittle{
+    text-align: center;
+    font-size: 50px;
+}
+
+section #contactForm{
+    margin-top: 30px;
+}
+section #contactForm label{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 30px;
+    padding-right: 20px;
+}
+section #contactForm input,
+section #contactForm select {
+    min-height: 50px;
+}
+section #contactForm .form-check-label{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 16px;
+}
+section #contactForm .correctInput{
+    display: none;
+}
+section #contactForm .errorForm{
+    display: block;
+    color: #ff0000;
+    margin-bottom: 0px;
+}
+section #contactForm .blocPassword{
+    position: relative;
+}
+section #contactForm .blocPassword img {
+    position: absolute;
+    top: 58px;
+    right: 11px;
+}
+section #contactForm .blocPassword #closedEyeP,
+section #contactForm .blocPassword #closedEyeRP{
+    display: none;
+}
+section #contactForm .btn-warning {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 12px 24px 6px;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+
+/* ************************************************************************** */
+/* ******************************* Footer *********************************** */
+/* ************************************************************************** */
+footer .container-fluid{
+    padding-top: 20px;
+}
+footer div.xarxes i{
+    color: #eeeeee;
+}
+footer div.xarxes i:hover{
+    color: #cccccc;
+}
+footer .xarxes {
+    text-align: center;
+}
+
