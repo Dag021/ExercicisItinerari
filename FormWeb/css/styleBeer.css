@@ -169,12 +169,12 @@ section #sectionPage{
     max-width: 1150px;
     height: fit-content;
     margin: 0 auto 200px;
-    padding: 150px 15px 115px;
+    padding: 75px 15px 115px;
     background-image: url("../img/background-paper.png");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
 }
 
 section #sectionPage #sectionPageFirst{
