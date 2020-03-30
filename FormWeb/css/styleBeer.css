@@ -174,7 +174,7 @@ section #sectionPage{
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center;
-    background-size: cover;*/
+    background-size: contain;
 }
 
 section #sectionPage #sectionPageFirst{
