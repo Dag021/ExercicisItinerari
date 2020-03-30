@@ -14,6 +14,7 @@
 html, body{
     padding: 0;
     margin: 0;
+    /*overflow-x: hidden;*/
 }
 html *{ 
     box-sizing: border-box; 
@@ -163,6 +164,23 @@ section h2.tittleSection{
 /* ******************************* Form ************************************* */
 /* ************************************************************************** */
 
+section #sectionPage{
+    position: relative;
+    max-width: 1150px;
+    height: fit-content;
+    margin: 0 auto 200px;
+    padding: 75px 15px 115px;
+    background-image: url("../img/background-paper.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;*/
+}
+
+section #sectionPage #sectionPageFirst{
+    max-width: 100%;
+}
+
 section .form_tittle{
     text-align: center;
     font-size: 50px;
@@ -193,6 +211,7 @@ section #contactForm .centerInputFlag{
 section #contactForm input,
 section #contactForm select {
     height: 50px;
+    width: 95%;
 }
 section #contactForm .form-check-label{
     font-family: 'Gloria Hallelujah', cursive;
@@ -298,6 +317,13 @@ section#blockPopUp form  .autocomplete-active {
 /* ************************************************************************** */
 /* ******************************* Footer *********************************** */
 /* ************************************************************************** */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 footer .container-fluid{
     padding-top: 20px;
 }
