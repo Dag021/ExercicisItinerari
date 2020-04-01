@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--  meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Ejercicio Vehículos</title>
+    <!-- Reset styles for this template -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" >
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Web CSS & JS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/style.js"></script>
+    <script src="../models/car.js"></script>
+    <script src="../models/wheel.js"></script>
+    <script src="../controllers/controller.js"></script>
+  </head>
+  <body>
+<!-- START Header -->
+	<header>
+		<div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-12 text-center">
+                    <h1>Ejercici Vehícles</h1>
+                </div><!-- col -->
+            </div><!-- row -->
+		</div><!-- container-fluid -->
+	</header>
+<!-- END Header -->
+<!---------------->
+<!-- START Nav --> 
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars10" aria-controls="navbars10" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbars10">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<!-- END Nav --> 
+<!---------------->
+<!-- START Article -->
+<!-- START Breadcrumb-->
+    <section>
+        <div aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page"> <span class="labelBreadcrumb">You are here  <i class="far fa-hand-point-right"></i></span> Home</li>
+            </ol>
+        </div>
+    </section>
+<!-- END Breadcrumb-->
+<!---------------->
+<!-- START Section Contain -->
+    <section>
+        <div class="container-fluid sectionContain" id="sectionPage">
+            <div class="row justify-content-center">
+                <div class="col-8 text-center ">
+                    <div id="carInfo">
+                        <h3>Car</h3>
+                        <div class="form-row">
+                            <div class="col-md-4">
+                                <div id="infoPlate">Plate:</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div id="infoBrand">Brand:</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div id="infoColor">Color:</div>
+                            </div>
+                        </div>
+                        <div id="wheelsInfo">
+                              <h3>Wheels</h3>
+                              <div class="form-row">
+                                  <div class="col-md-3">
+                                      <h6>Wheel 1</h6>
+                                      <div id="infoBrandW1">Brand:</div>
+                                      <div id="infoDiameterW1">Diameter:</div>
+                                  </div>
+                                  <div class="col-md-3">
+                                      <h6>Wheel 2</h6>
+                                      <div id="infoBrandW2">Brand:</div>
+                                      <div id="infoDiameterW2">Diameter:</div>
+                                  </div>
+                                  <div class="col-md-3">
+                                      <h6>Wheel 3</h6>
+                                      <div id="infoBrandW3">Brand:</div>
+                                      <div id="infoDiameterW3">Diameter:</div>
+                                  </div>
+                                  <div class="col-md-3">
+                                      <h6>Wheel 4</h6>
+                                      <div id="infoBrandW4">Brand:</div>
+                                      <div id="infoDiameterW4">Diameter:</div>
+                                  </div>
+                              </div>
+                        </div>
+                    </div>
+                    <form class="needs-validation" action="" onSubmit="createCar(); return false" id="CarsForm" novalidate>
+                          <div class="form-row">
+                              <div class="col-md-4">
+                                <label for="valPlate">Plate</label>
+                                <input type="text" class="form-control" id="valPlate" >
+                                <div id="errorValPlate" class="in-valid-feedback">REQUIRED FIELD</div>
+                              </div>
+                              <div class="col-md-4">
+                                <label for="valBrand">Brand</label>
+                                <input type="text" class="form-control" id="valBrand" >
+                                <div id="errorValBrand" class="in-valid-feedback">REQUIRED FIELD</div>
+                              </div>
+                              <div class="col-md-4">
+                                <label for="valColor">Color</label>
+                                <input type="text" class="form-control" id="valColor" >
+                                <div id="errorValColor" class="in-valid-feedback">REQUIRED FIELD</div>
+                              </div>
+                          </div>
+
+                          <button class="btn btn-primary" type="submit">Create Car</button>
+                      </form>
+                      <form class="needs-validation" action="" onSubmit="createWheels(); return false" id="WheelsForm" novalidate>
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label for="valBrandW1">Brand Wheel 1</label>
+                                      <input type="text" class="form-control" id="valBrandW1" >
+                                      <div id="errorValBrandW1"  class="in-valid-feedback">REQUIRED FIELD</div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="valDiameterW1">Diameter Wheel 1</label>
+                                      <input type="text" class="form-control" id="valDiameterW1" required>
+                                      <div id="errorValDiameterW1" class="in-valid-feedback">REQUIRED FIELD</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label for="valBrandW2">Brand Wheel 2</label>
+                                      <input type="text" class="form-control" id="valBrandW2" >
+                                      <div id="errorValBrandW2" class="in-valid-feedback">REQUIRED FIELD</div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="valDiameterW2">Diameter Wheel 2</label>
+                                      <input type="text" class="form-control" id="valDiameterW2" >
+                                      <div id="errorValDiameterW2" class="in-valid-feedback">REQUIRED FIELD</div>
+                                    </div>
+                                </div>
+                            </div>    
+                            <div class="form-row">
+                              <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="valBrandW3">Brand Wheel 3</label>
+                                    <input type="text" class="form-control" id="valBrandW3" >
+                                    <div id="errorValBrandW3" class="in-valid-feedback">REQUIRED FIELD</div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="valDiameterW3">Diameter Wheel 3</label>
+                                    <input type="text" class="form-control" id="valDiameterW3" >
+                                    <div id="errorValDiameterW3" class="in-valid-feedback">REQUIRED FIELD</div>
+                                  </div>
+                              </div>
+                              <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="valBrandW4">Brand Wheel 4</label>
+                                    <input type="text" class="form-control" id="valBrandW4" >
+                                    <div id="errorValBrandW4" class="in-valid-feedback">REQUIRED FIELD</div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="valDiameterW4">Diameter Wheel 4</label>
+                                    <input type="text" class="form-control" id="valDiameterW4" >
+                                    <div id="errorValDiameterW4" class="in-valid-feedback">REQUIRED FIELD</div>
+                                  </div>
+                              </div>
+                            </div>
+
+                          <button class="btn btn-primary" type="submit">Add Wheels</button>
+                      </form>
+
+                </div><!--col-->
+            </div><!--row-->
+        </div>
+    </section>
+  <!-- END Section -->
+  <!-- END Article -->
+  <!-- START Footer -->
+<footer class="page-footer font-small">
+    <div class="container-fluid bg-dark">    
+        <div class="row socket">
+          <div class="col-md-12 text-center">
+           © Quarantine COVID-19
+          </div><!-- col -->
+      </div><!-- row-->
+    </div><!-- Footer -->
+    <!-- END Footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

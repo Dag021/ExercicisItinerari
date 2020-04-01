@@ -1,0 +1,175 @@
+/* ************************************************************************** */
+/* ******************************* General Porpouse  ************************ */
+/* ************************************************************************** */
+
+html *{ 
+    box-sizing: border-box; 
+    font-family: 'Oswald';
+    text-decoration: none;
+} 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald';
+    font-weight: 700;
+}
+body{
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+}
+a:hover{
+    text-decoration: none;
+    color: #cccccc;
+}
+img.responsive, #circleStyles.responsive{ 
+    max-width: 100%; 
+    height: auto; 
+}
+img.center, #circleStyles.responsive { 
+    display:block; 
+    margin : 0px auto;
+}
+/* ************************************************************************** */
+/* ******************************* Header *********************************** */
+/* ************************************************************************** */
+
+header{
+    background-image: url("../img/header.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+  }
+header h1{
+    font-size: 3.5em;
+} 
+header * {
+    color: #eeeeee;
+}
+header .row {
+    min-height: 170px;
+}
+/* ************************************************************************** */
+/* ******************************* Nav ************************************** */
+/* ************************************************************************** */
+
+#navbar {
+    z-index: 1000;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .content {
+    padding-top: 60px;
+}
+#navbar a.nav-link{
+    font-family: 'Oswald';
+    font-size: 2em;
+    padding: 8px 16px 4px;  
+}
+/* ************************************************************************** */
+/* ******************************* Section breadcrumb *********************** */
+/* ************************************************************************** */
+
+section span.labelBreadcrumb{
+    font-family: 'Oswald';
+    font-size: 1em;
+    color: #cccccc;
+    padding: 0 15px;
+}
+section .breadcrumb{
+    background-color: transparent;
+}  
+section .breadcrumb li{
+    font-family: 'Oswald';
+    font-size: 1.5em;
+}
+.breadcrumb-item.active {
+    color: #cccccc;
+}
+section .breadcrumb li a{
+    font-family: 'Oswald';
+    font-size: 1em;
+    color: #ffffff;
+}
+section .breadcrumb li a:hover{
+    font-family: 'Oswald';
+    font-size: 1em;
+    color: #eeeeee;
+}
+  
+/* ************************************************************************** */
+/* ******************************* Section Contain ************************** */
+/* ************************************************************************** */
+
+#carInfo, #wheelsInfo, #WheelsForm, .in-valid-feedback {
+    display: none;
+}
+.in-valid-feedback{
+    color: #fbff00;
+}
+section .sectionContain{
+    margin: 75px 0px;
+    min-height: 700px;
+} 
+section .sectionContain #carInfo{
+    font-size: 21px;;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 50px;
+} 
+section .sectionContain #carInfo h3{
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+}
+section .sectionContain #carInfo h6{
+    font-size: 23px;
+    text-align: center;
+    padding: 10px;
+}
+section .sectionContain #carInfo #wheelsInfo{
+    margin-top: 20px;
+}
+section .sectionContain form label {
+    color: #ffffff;
+    font-size: 35px;
+}
+section .sectionContain form input, section form .sectionContain button {
+    font-size: 25px;
+}
+
+#CarsForm, #WheelsForm{
+    border: 2px solid #ffffff;
+    border-radius: 20px; 
+    padding: 30px;
+    margin-bottom: 50px;
+}
+#CarsForm button{
+    margin-top: 30px;
+    
+}
+#WheelsForm .col-md-6{
+    padding: 30px;
+}
+#CarsForm input, #WheelsForm input{
+    text-align: center;
+    text-transform: uppercase;
+}
+button {
+    text-transform: uppercase;
+}
+
+/* ************************************************************************** */
+/* ******************************* Footer *********************************** */
+/* ************************************************************************** */
+footer .container-fluid{
+    padding: 20px;
+    color: #ffffff;
+}
+
