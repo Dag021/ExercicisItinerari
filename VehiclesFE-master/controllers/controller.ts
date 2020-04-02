@@ -101,6 +101,7 @@ function createWheels(): any {
             alert("WHEEL DIAMETER 1 IS NOT CORRECT");
             (<HTMLInputElement>document.getElementById('errorValDiameterW1')).innerHTML = "DIAMETER: d > 0.4 & d < 2 ";
             (<HTMLInputElement>document.getElementById('errorValDiameterW1')).style.display = "block";
+            (<HTMLInputElement>document.getElementById('valDiameterW2')).className = "form-control is-invalid";
         }
     }
     if(diameterW2 > 0.4 && diameterW2 < 2 ){
@@ -115,6 +116,7 @@ function createWheels(): any {
             alert("WHEEL DIAMETER 2 IS NOT CORRECT");
             (<HTMLInputElement>document.getElementById('errorValDiameterW2')).innerHTML = "DIAMETER: d > 0.4 & d < 2 ";
             (<HTMLInputElement>document.getElementById('errorValDiameterW2')).style.display = "block";
+            (<HTMLInputElement>document.getElementById('valDiameterW2')).className = "form-control is-invalid";
         }
     }
     if(diameterW3 > 0.4 && diameterW3 < 2 ){
@@ -129,6 +131,7 @@ function createWheels(): any {
             alert("WHEEL DIAMETER 3 IS NOT CORRECT");
             (<HTMLInputElement>document.getElementById('errorValDiameterW3')).innerHTML = "DIAMETER: d > 0.4 & d < 2 ";
             (<HTMLInputElement>document.getElementById('errorValDiameterW3')).style.display = "block";
+            (<HTMLInputElement>document.getElementById('valDiameterW2')).className = "form-control is-invalid";
         }
     }
     if(diameterW4 > 0.4 && diameterW4 < 2 ){
@@ -143,6 +146,7 @@ function createWheels(): any {
             alert("WHEEL DIAMETER 4 IS NOT CORRECT");
             (<HTMLInputElement>document.getElementById('errorValDiameterW4')).innerHTML = "DIAMETER: d > 0.4 & d < 2 ";
             (<HTMLInputElement>document.getElementById('errorValDiameterW4')).style.display = "block";
+            (<HTMLInputElement>document.getElementById('valDiameterW2')).className = "form-control is-invalid";
         }
     }
 
