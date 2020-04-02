@@ -97,9 +97,10 @@ function createWheels() {
             document.getElementById('errorValDiameterW1').style.display = "block";
         }
         else {
-            alert("WHEEL DIAMETER 1 IS NOT CORRECT");
+            document.getElementById('valDiameterW1').className = "form-control is-invalid";
             document.getElementById('errorValDiameterW1').innerHTML = "DIAMETER: d > 0.4 & d < 2 ";
             document.getElementById('errorValDiameterW1').style.display = "block";
+            alert("WHEEL DIAMETER 1 IS NOT CORRECT");
         }
     }
     if (diameterW2 > 0.4 && diameterW2 < 2) {
@@ -113,9 +114,10 @@ function createWheels() {
             document.getElementById('errorValDiameterW2').style.display = "block";
         }
         else {
-            alert("WHEEL DIAMETER 2 IS NOT CORRECT");
+            document.getElementById('valDiameterW2').className = "form-control is-invalid";
             document.getElementById('errorValDiameterW2').innerHTML = "DIAMETER: d > 0.4 & d < 2 ";
             document.getElementById('errorValDiameterW2').style.display = "block";
+            alert("WHEEL DIAMETER 2 IS NOT CORRECT");
         }
     }
     if (diameterW3 > 0.4 && diameterW3 < 2) {
@@ -123,15 +125,17 @@ function createWheels() {
         document.getElementById('errorValDiameterW3').style.display = "none";
     }
     else {
+        document.getElementById('valDiameterW2').className = "form-control is-invalid";
         checkDiameter = false;
         if (valueDiameterW3 == "") {
             document.getElementById('valDiameterW3').className = "form-control is-invalid";
             document.getElementById('errorValDiameterW3').style.display = "block";
         }
         else {
-            alert("WHEEL DIAMETER 3 IS NOT CORRECT");
+            document.getElementById('valDiameterW3').className = "form-control is-invalid";
             document.getElementById('errorValDiameterW3').innerHTML = "DIAMETER: d > 0.4 & d < 2 ";
             document.getElementById('errorValDiameterW3').style.display = "block";
+            alert("WHEEL DIAMETER 3 IS NOT CORRECT");
         }
     }
     if (diameterW4 > 0.4 && diameterW4 < 2) {
@@ -145,9 +149,10 @@ function createWheels() {
             document.getElementById('errorValDiameterW4').style.display = "block";
         }
         else {
-            alert("WHEEL DIAMETER 4 IS NOT CORRECT");
+            document.getElementById('valDiameterW4').className = "form-control is-invalid";
             document.getElementById('errorValDiameterW4').innerHTML = "DIAMETER: d > 0.4 & d < 2 ";
             document.getElementById('errorValDiameterW4').style.display = "block";
+            alert("WHEEL DIAMETER 4 IS NOT CORRECT");
         }
     }
     //Checked Brand

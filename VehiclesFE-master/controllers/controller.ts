@@ -98,10 +98,10 @@ function createWheels(): any {
             (<HTMLInputElement>document.getElementById('valDiameterW1')).className = "form-control is-invalid";
             (<HTMLInputElement>document.getElementById('errorValDiameterW1')).style.display = "block";
         } else {
-            alert("WHEEL DIAMETER 1 IS NOT CORRECT");
+            (<HTMLInputElement>document.getElementById('valDiameterW1')).className = "form-control is-invalid";
             (<HTMLInputElement>document.getElementById('errorValDiameterW1')).innerHTML = "DIAMETER: d > 0.4 & d < 2 ";
             (<HTMLInputElement>document.getElementById('errorValDiameterW1')).style.display = "block";
-            (<HTMLInputElement>document.getElementById('valDiameterW2')).className = "form-control is-invalid";
+            alert("WHEEL DIAMETER 1 IS NOT CORRECT");
         }
     }
     if(diameterW2 > 0.4 && diameterW2 < 2 ){
@@ -113,25 +113,26 @@ function createWheels(): any {
             (<HTMLInputElement>document.getElementById('valDiameterW2')).className = "form-control is-invalid";
             (<HTMLInputElement>document.getElementById('errorValDiameterW2')).style.display = "block";
         } else {
-            alert("WHEEL DIAMETER 2 IS NOT CORRECT");
+            (<HTMLInputElement>document.getElementById('valDiameterW2')).className = "form-control is-invalid";
             (<HTMLInputElement>document.getElementById('errorValDiameterW2')).innerHTML = "DIAMETER: d > 0.4 & d < 2 ";
             (<HTMLInputElement>document.getElementById('errorValDiameterW2')).style.display = "block";
-            (<HTMLInputElement>document.getElementById('valDiameterW2')).className = "form-control is-invalid";
+            alert("WHEEL DIAMETER 2 IS NOT CORRECT");
         }
     }
     if(diameterW3 > 0.4 && diameterW3 < 2 ){
         (<HTMLInputElement>document.getElementById('valDiameterW3')).className = "form-control is-valid";
         (<HTMLInputElement>document.getElementById('errorValDiameterW3')).style.display = "none";
     } else {
+        (<HTMLInputElement>document.getElementById('valDiameterW2')).className = "form-control is-invalid";
         checkDiameter = false;
         if(valueDiameterW3 == ""){
             (<HTMLInputElement>document.getElementById('valDiameterW3')).className = "form-control is-invalid";
             (<HTMLInputElement>document.getElementById('errorValDiameterW3')).style.display = "block";
         } else {
-            alert("WHEEL DIAMETER 3 IS NOT CORRECT");
+            (<HTMLInputElement>document.getElementById('valDiameterW3')).className = "form-control is-invalid";
             (<HTMLInputElement>document.getElementById('errorValDiameterW3')).innerHTML = "DIAMETER: d > 0.4 & d < 2 ";
             (<HTMLInputElement>document.getElementById('errorValDiameterW3')).style.display = "block";
-            (<HTMLInputElement>document.getElementById('valDiameterW2')).className = "form-control is-invalid";
+            alert("WHEEL DIAMETER 3 IS NOT CORRECT");
         }
     }
     if(diameterW4 > 0.4 && diameterW4 < 2 ){
@@ -143,10 +144,10 @@ function createWheels(): any {
             (<HTMLInputElement>document.getElementById('valDiameterW4')).className = "form-control is-invalid";
             (<HTMLInputElement>document.getElementById('errorValDiameterW4')).style.display = "block";
         } else {
-            alert("WHEEL DIAMETER 4 IS NOT CORRECT");
+            (<HTMLInputElement>document.getElementById('valDiameterW4')).className = "form-control is-invalid";
             (<HTMLInputElement>document.getElementById('errorValDiameterW4')).innerHTML = "DIAMETER: d > 0.4 & d < 2 ";
             (<HTMLInputElement>document.getElementById('errorValDiameterW4')).style.display = "block";
-            (<HTMLInputElement>document.getElementById('valDiameterW2')).className = "form-control is-invalid";
+            alert("WHEEL DIAMETER 4 IS NOT CORRECT");
         }
     }
 
