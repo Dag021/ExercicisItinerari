@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enunciat Rockets JavaScript: FASE 1</title>
+</head>
+<body>
+    <H1>Enunciat Rockets JavaScript</H1>
+    <H3>FASE 1</H3>
+    <p>
+        <ol>
+            <li>
+                Creem dos coets amb els codis “32WESSDS” I “LDSFJA32”. El primer coet tindrà tres propulsors i el segon sis propulsors.
+                <i> (Un coet està identificat per un codi de 8 caràcters i un número de propulsors.)</i>
+            </li>
+            <li>Mostrar a pantalla el codi dels coets i el número de propulsors que té.
+                <ul>
+                    <li>Rocket 32WESSDS has 3 thrusters</li>
+                    <li>Rocket LDSFJA32 has 6 thrusters</li>
+                </ul> 
+            </li>   
+        </ol>  
+        
+        <strong>Press "Create Rocket" for this.</strong> (fill inputs and push the button for NEW rockets)
+    </p>
+    <div> 
+        <div>
+            <label for="codiCoet">Codi Coet</label>
+            <input type="text"  id="codiCoet" placeholder="Code (8 characters)">
+        </div>
+        <div>
+            <label for="numPropulsorCoet">Numero de Propulsors</label>
+            <input type="text"  id="numPropulsorCoet" placeholder="Number of thrusters">
+        </div>
+    </div>
+        
+    <button onclick="createCoet()">Create Rocket</button>
+
+    <h3>Rockets:</h3>
+    <p id="coetInfo"></p>
+
+
+    <script src="../models/coet.js"></script>
+    <script src="../controllers/controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enunciat Rockets JavaScript: FASE 3</title>
+</head>
+<body>
+    <H1>Enunciat Rockets JavaScript</H1>
+    <H3>FASE 3</H3>
+    <p>
+        <p>
+            <ul>
+                <li>Tots els propulsors tindran una potència actual que començarà amb 0. </li>
+                <li>El coet tindrà dos mètodes, accelerar o frenar i  augmentarà o es reduirà de 10 en 10 la potencia del propulsor. </li>
+                <li>El coet tindrà una velocitat actual que és la suma de totes les potències dels seus propulsors.</li>
+            </ul> 
+           
+        </p>
+        <ol>
+            <li>Creem dos coets amb els codis “32WESSDS” I “LDSFJA32”. <br>
+                El primer coet tindrà tres propulsors (potència màxima: 10,30,80) i el segon sis propulsors (potència màxima: 30,40,50,50,30,10).</li>
+            <li>Mostrar a pantalla el codi dels coets, el número de propulsors que té i la potència màxima de cada propulsor. 
+                <ul>
+                    <li>32WESSDS: 10, 30, 80</li>
+                    <li>LDSFJA32: 30, 40, 50, 50, 30, 10</li>
+                </ul> 
+            </li>
+            <li>Mostrar a pantalla la velocitat actual dels coets</li>
+            <li>Accelerar amb els coets tres cops</li> 
+            <li>Mostrar a pantalla la velocitat actual</li>
+            <li>Frenar cinc cops amb el primer coet (“32WESSDS”) i accelerar set amb el segon coet.</li>
+            <li>Mostrar a pantalla la velocitat actual</li>
+            <li>Accelerar 15 cops amb els dos coets.</li>
+            <li>Mostrar a pantalla la velocitat actual</li>
+        </ol>  
+        
+        <h4>Results:</h4>
+        <ol>
+            <li><strong>Press "Create Rocket" for this.</strong> (fill inputs and push the button for NEW rockets)</li>
+            <li><strong>Press "Consult All Rockets" for this.</strong></li>
+            <li><strong>Press "Current speed" for this.</strong></li>
+            <li><strong>Press (x3) "Speed ​​Up All Rockets" for this.</strong></li>
+            <li><strong>Press "Current speed" for this.</strong></li>
+            <li><strong>Press (x5) "Breack rocket 1" for this & Press (x7) "Accelerate rocket 2" for this.</strong></li>
+            <li><strong>Press "Current speed" for this.</strong></li>
+            <li><strong>Press (x15) "Speed ​​Up All Rockets" for this.</strong></li>
+            <li><strong>Press "Current speed" for this.</strong></li>
+        </ol>
+        
+    </p>
+    <div>
+        <div>
+            <label for="codiCoet">Codi Coet</label>
+            <input type="text"  id="codiCoet" placeholder="Code (8 characters)">
+        </div>
+        <div>
+            <label for="numPropulsorCoet">Numero de Propulsors</label>
+            <input type="text"  id="numPropulsorCoet" placeholder="Number of thrusters">
+        </div>        
+    </div>  
+
+
+    <button onclick="createCoet()">Create Rocket</button>
+    <button onclick="velocitatActual()">Current speed</button>
+    <button onclick="accelerarAllCoet()">Speed ​​Up All Rockets</button>
+    <button onclick="frenarAllCoet()">Slow Down All Rockets</button>
+    <button onclick="consultCoet()">Consult All Rockets</button></br>
+
+    <button onclick="accelerarCoet('32WESSDS')">Accelerate rocket 1</button>
+    <button onclick="accelerarCoet('LDSFJA32')">Accelerate rocket 2</button>
+    <button onclick="frenarCoet('32WESSDS')">Breack rocket 1</button>
+    <button onclick="frenarCoet('LDSFJA32')">Breack rocket 2</button></br>
+    
+    <h3>Rockets:</h3>
+    <p id="coetInfo"></p>
+    <p id="potenciaActual"></p>
+
+    <script src="../models/coet.js"></script>
+    <script src="../models/propulsor.js"></script>
+    <script src="../controllers/controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enunciat Rockets JavaScript: FASE 3</title>
+    <style>
+        #Fase4{
+            margin: 10px;
+            border: 1px solid #000000;
+            padding: 10px;
+            width: 600px;
+        }
+        #Fase4 h1, #Fase4  button{
+            margin: 5px;
+            padding: 10px; 
+        }
+
+    </style>
+
+</head>
+<body>
+    <H1>Enunciat Rockets JavaScript</H1>
+    <H3>FASE 4</H3>
+    <p>
+
+    </p>
+    
+    <div id="Fase4">
+        <h1>Rockets</h1>
+        <button onclick="createCoet('32WESSDS', 3)">Create Rocket 1</button>
+        <button onclick="createCoet('LDSFJA32', 6)">Create Rocket 2</button></br>
+
+        <button onclick="accelerarCoet('32WESSDS')">Accelerate rocket 1</button>
+        <button onclick="accelerarCoet('LDSFJA32')">Accelerate rocket 2</button>
+        <button onclick="frenarCoet('32WESSDS')">Breack rocket 1</button>
+        <button onclick="frenarCoet('LDSFJA32')">Breack rocket 2</button></br>
+
+        <button onclick="consultCoet('32WESSDS')">Print rocket 1 info</button>
+        <button onclick="consultCoet('LDSFJA32')">Print rocket 1 info</button>
+        <button onclick="consultAllRockets()">Print all rocket</button></br>
+
+        <p id="infoRockets"></p>
+        <p id="infoRocketsMax"></p>
+    </div>
+
+
+<div style="display: none;">
+    <div>
+        <label for="codiCoet">Codi Coet</label>
+        <input type="text"  id="codiCoet" >
+    </div>
+    <div>
+        <label for="numPropulsorCoet">Numero de Propulsors</label>
+        <input type="text"  id="numPropulsorCoet" >
+    </div>
+    <p id="coetInfo"></p>
+    <p id="potenciaActual"></p>
+    <button onclick="createCoet()">Create Rocket</button>
+    <button onclick="velocitatActual()">Velocitat Actual</button>
+    <button onclick="accelerarCoet()">Accelerar Rocket</button>
+    <button onclick="frenarCoet()">Frenar Rocket</button>
+</div>
+    
+    <script src="../models/coet.js"></script>
+    <script src="../models/propulsor.js"></script>
+    <script src="../controllers/controller.js"></script>
+</body>
+</html>

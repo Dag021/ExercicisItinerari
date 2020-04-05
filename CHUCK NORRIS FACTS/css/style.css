@@ -1,0 +1,25 @@
+body{
+    background-color: #000000;
+}
+header {
+    background-color: #000000;
+    background-image: url("../img/ChuckNorrisApproved.jpg");
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+}
+header div{
+    height: 100%;
+    padding-bottom: 3%;
+}
+header h1{
+    color: #ffffff;
+    font-family: 'Stardos Stencil', cursive;
+    font-size: 60px;
+}
+
+section #chuckFact {
+    font-size: 30px;
+}
