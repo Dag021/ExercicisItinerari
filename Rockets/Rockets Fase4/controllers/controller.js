@@ -36,18 +36,18 @@ function createCoet(codi, numPropulsors) {
     }
     //propulsor Rocket 1
     if (coet.codi == "32WESSDS") {
-        coet.addWheel(new Propulsor(10));
-        coet.addWheel(new Propulsor(30));
-        coet.addWheel(new Propulsor(80));
+        coet.addPropulsor(new Propulsor(10));
+        coet.addPropulsor(new Propulsor(30));
+        coet.addPropulsor(new Propulsor(80));
     }
     //propulsor Rocket 2
     if (coet.codi == "LDSFJA32") {
-        coet.addWheel(new Propulsor(30));
-        coet.addWheel(new Propulsor(40));
-        coet.addWheel(new Propulsor(50));
-        coet.addWheel(new Propulsor(50));
-        coet.addWheel(new Propulsor(30));
-        coet.addWheel(new Propulsor(10));
+        coet.addPropulsor(new Propulsor(30));
+        coet.addPropulsor(new Propulsor(40));
+        coet.addPropulsor(new Propulsor(50));
+        coet.addPropulsor(new Propulsor(50));
+        coet.addPropulsor(new Propulsor(30));
+        coet.addPropulsor(new Propulsor(10));
     }
 }
 //Consulta Info Coets (codi)
@@ -85,10 +85,10 @@ function consultPotenciaCoet(codi) {
             document.getElementById("infoRockets").innerHTML += "Rocket " + arrayCoets[i].codi + " booster power: ";
             for (var j = 0; j < arrayCoets[i].propulsors.length; j++) {
                 document.getElementById("infoRockets").innerHTML += arrayCoets[i].propulsors[j].potenciaActual + " ";
-                var numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual;
-                sumaPotencias += numeroPotencias;
+                //let numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual ;
+                //sumaPotencias +=  numeroPotencias;
             }
-            document.getElementById("infoRockets").innerHTML += "</br>" + "The current speed is " + sumaPotencias + "</br>";
+            document.getElementById("infoRockets").innerHTML += "</br>" + "The current speed is " + arrayCoets[i].velocitat() + "</br>";
         }
     }
 }
@@ -100,10 +100,10 @@ function consultPotenciaAllRockets() {
         document.getElementById("infoRockets").innerHTML += "Rocket " + arrayCoets[i].codi + " booster power: ";
         for (var j = 0; j < arrayCoets[i].propulsors.length; j++) {
             document.getElementById("infoRockets").innerHTML += arrayCoets[i].propulsors[j].potenciaActual + " ";
-            var numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual;
-            sumaPotencias += numeroPotencias;
+            //let numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual ;
+            //sumaPotencias +=  numeroPotencias;
         }
-        document.getElementById("infoRockets").innerHTML += "</br>" + "The current speed is " + sumaPotencias + "</br>";
+        document.getElementById("infoRockets").innerHTML += "</br>" + "The current speed is " + arrayCoets[i].velocitat() + "</br>";
     }
 }
 //Accelerar Propulsors
@@ -116,10 +116,10 @@ function accelerarCoet(codi) {
             document.getElementById("infoRockets").innerHTML += "Rocket " + arrayCoets[i].codi + " booster power: ";
             for (var j = 0; j < arrayCoets[i].propulsors.length; j++) {
                 document.getElementById("infoRockets").innerHTML += +arrayCoets[i].propulsors[j].accelerar() + " ";
-                var numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual;
-                sumaPotencias += numeroPotencias;
+                //let numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual ;
+                //sumaPotencias +=  numeroPotencias;
             }
-            document.getElementById("infoRockets").innerHTML += "</br>" + "The current speed is " + sumaPotencias + "</br>";
+            document.getElementById("infoRockets").innerHTML += "</br>" + "The current speed is " + arrayCoets[i].velocitat() + "</br>";
         }
     }
 }
@@ -133,10 +133,10 @@ function frenarCoet(codi) {
             document.getElementById("infoRockets").innerHTML += "Rocket " + arrayCoets[i].codi + " booster power: ";
             for (var j = 0; j < arrayCoets[i].propulsors.length; j++) {
                 document.getElementById("infoRockets").innerHTML += "" + arrayCoets[i].propulsors[j].frenar() + " ";
-                var numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual;
-                sumaPotencias += numeroPotencias;
+                //let numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual ;
+                //sumaPotencias +=  numeroPotencias;
             }
-            document.getElementById("infoRockets").innerHTML += "</br>" + "The current speed is " + sumaPotencias + "</br>";
+            document.getElementById("infoRockets").innerHTML += "</br>" + "The current speed is " + arrayCoets[i].velocitat() + "</br>";
         }
     }
 }

@@ -8,7 +8,7 @@ class Coet{
         this.numPropulsors=numPropulsors;
     }
     
-    addWheel(propulsor:Propulsor):void{
+    addPropulsor(propulsor:Propulsor):void{
         this.propulsors.push(propulsor);
     }
 }

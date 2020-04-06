@@ -41,7 +41,7 @@ function createCoet() {
                 // introduim la potencia dels propulsors
                 for (var i_1 = 1; i_1 <= numPropulsors; i_1++) {
                     var potenciaMaxima = Number(window.prompt("Potencia max propulsor " + i_1 + " :"));
-                    coet.addWheel(new Propulsor(potenciaMaxima));
+                    coet.addPropulsor(new Propulsor(potenciaMaxima));
                 }
             }
             else {
@@ -55,26 +55,26 @@ function createCoet() {
         coet = new Coet("32WESSDS", 3);
         arrayCoets.push(coet);
         var propulsor = new Propulsor(10);
-        coet.addWheel(propulsor);
+        coet.addPropulsor(propulsor);
         var propulsor = new Propulsor(30);
-        coet.addWheel(propulsor);
+        coet.addPropulsor(propulsor);
         var propulsor = new Propulsor(80);
-        coet.addWheel(propulsor);
+        coet.addPropulsor(propulsor);
         //Rocket 2
         coet = new Coet("LDSFJA32", 6);
         arrayCoets.push(coet);
         var propulsor = new Propulsor(30);
-        coet.addWheel(propulsor);
+        coet.addPropulsor(propulsor);
         var propulsor = new Propulsor(40);
-        coet.addWheel(propulsor);
+        coet.addPropulsor(propulsor);
         var propulsor = new Propulsor(50);
-        coet.addWheel(propulsor);
+        coet.addPropulsor(propulsor);
         var propulsor = new Propulsor(50);
-        coet.addWheel(propulsor);
+        coet.addPropulsor(propulsor);
         var propulsor = new Propulsor(30);
-        coet.addWheel(propulsor);
+        coet.addPropulsor(propulsor);
         var propulsor = new Propulsor(10);
-        coet.addWheel(propulsor);
+        coet.addPropulsor(propulsor);
         //New Rocket
         if (codi != "") {
             if (validarCodi == true && isNaN(numPropulsors) == false) {
@@ -83,7 +83,7 @@ function createCoet() {
                 // introduim la potencia dels propulsors
                 for (var i_2 = 1; i_2 <= numPropulsors; i_2++) {
                     var potenciaMaxima = Number(window.prompt("Potencia max propulsor " + i_2 + " :"));
-                    coet.addWheel(new Propulsor(potenciaMaxima));
+                    coet.addPropulsor(new Propulsor(potenciaMaxima));
                 }
             }
         }
@@ -146,16 +146,26 @@ function frenarCoet(codi) {
         }
     }
 }
+/*
+function velocitatActual(){
+    (<HTMLInputElement>document.getElementById("potenciaActual")).innerHTML = "";
+    
+    for(let i=0; i< arrayCoets.length; i++){
+        var sumaPotencias = 0;
+        (<HTMLInputElement>document.getElementById("potenciaActual")).innerHTML += arrayCoets[i].codi + ": ";
+        for (let j=0; j< arrayCoets[i].propulsors.length; j++){
+            let numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual ;
+            sumaPotencias +=  numeroPotencias;
+        }
+        (<HTMLInputElement>document.getElementById("potenciaActual")).innerHTML +=   sumaPotencias + "</br>";
+        //(<HTMLInputElement>document.getElementById("potenciaActual")).innerHTML += ";
+    }
+}*/
 function velocitatActual() {
     document.getElementById("potenciaActual").innerHTML = "";
     for (var i = 0; i < arrayCoets.length; i++) {
-        var sumaPotencias = 0;
         document.getElementById("potenciaActual").innerHTML += arrayCoets[i].codi + ": ";
-        for (var j = 0; j < arrayCoets[i].propulsors.length; j++) {
-            var numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual;
-            sumaPotencias += numeroPotencias;
-        }
-        document.getElementById("potenciaActual").innerHTML += sumaPotencias + "</br>";
-        //(<HTMLInputElement>document.getElementById("potenciaActual")).innerHTML += ";
+        document.getElementById("potenciaActual").innerHTML += arrayCoets[i].velocitat() + " ";
+        document.getElementById("potenciaActual").innerHTML += "</br>";
     }
 }

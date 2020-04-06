@@ -38,19 +38,19 @@ function createCoet(codi : string, numPropulsors : number){
 
     //propulsor Rocket 1
     if(coet.codi == "32WESSDS"){
-        coet.addWheel(new Propulsor(10));
-        coet.addWheel(new Propulsor(30));
-        coet.addWheel(new Propulsor(80));
+        coet.addPropulsor(new Propulsor(10));
+        coet.addPropulsor(new Propulsor(30));
+        coet.addPropulsor(new Propulsor(80));
     }
     
     //propulsor Rocket 2
     if(coet.codi == "LDSFJA32"){
-        coet.addWheel(new Propulsor(30));
-        coet.addWheel(new Propulsor(40));
-        coet.addWheel(new Propulsor(50));
-        coet.addWheel(new Propulsor(50));
-        coet.addWheel(new Propulsor(30));
-        coet.addWheel(new Propulsor(10));
+        coet.addPropulsor(new Propulsor(30));
+        coet.addPropulsor(new Propulsor(40));
+        coet.addPropulsor(new Propulsor(50));
+        coet.addPropulsor(new Propulsor(50));
+        coet.addPropulsor(new Propulsor(30));
+        coet.addPropulsor(new Propulsor(10));
     }
 
 }
@@ -92,10 +92,10 @@ function consultPotenciaCoet( codi: string ){
             (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML += "Rocket " + arrayCoets[i].codi + " booster power: ";
             for (let j=0; j< arrayCoets[i].propulsors.length; j++){
                 (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML +=   arrayCoets[i].propulsors[j].potenciaActual + " ";
-                let numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual ;
-                sumaPotencias +=  numeroPotencias;
+                //let numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual ;
+                //sumaPotencias +=  numeroPotencias;
             }    
-            (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML +=  "</br>"+ "The current speed is " +  sumaPotencias + "</br>";     
+            (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML +=  "</br>"+ "The current speed is " +  arrayCoets[i].velocitat() + "</br>";     
         }
     }
 }
@@ -108,10 +108,10 @@ function consultPotenciaAllRockets(){
         (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML += "Rocket " + arrayCoets[i].codi + " booster power: ";
         for (let j=0; j< arrayCoets[i].propulsors.length; j++){
             (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML +=   arrayCoets[i].propulsors[j].potenciaActual + " ";
-            let numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual ;
-            sumaPotencias +=  numeroPotencias;
+            //let numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual ;
+            //sumaPotencias +=  numeroPotencias;
         }
-        (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML +=  "</br>"+ "The current speed is " +  sumaPotencias + "</br>";            
+        (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML +=  "</br>"+ "The current speed is " +  arrayCoets[i].velocitat()  + "</br>";            
     }
 }
 
@@ -125,10 +125,10 @@ function accelerarCoet( codi: string ){
             (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML += "Rocket " + arrayCoets[i].codi + " booster power: ";
             for (let j=0; j< arrayCoets[i].propulsors.length; j++){
                 (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML +=  + arrayCoets[i].propulsors[j].accelerar() + " ";
-                let numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual ;
-                sumaPotencias +=  numeroPotencias;
+                //let numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual ;
+                //sumaPotencias +=  numeroPotencias;
             }
-            (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML +=  "</br>"+ "The current speed is " +  sumaPotencias + "</br>";     
+            (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML +=  "</br>"+ "The current speed is " +  arrayCoets[i].velocitat()  + "</br>";     
         }
     }
 }
@@ -143,10 +143,10 @@ function frenarCoet(codi: string ){
             (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML += "Rocket " + arrayCoets[i].codi + " booster power: ";
             for (let j=0; j< arrayCoets[i].propulsors.length; j++){
                 (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML +=   "" + arrayCoets[i].propulsors[j].frenar() + " ";
-                let numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual ;
-                sumaPotencias +=  numeroPotencias;
+                //let numeroPotencias = arrayCoets[i].propulsors[j].potenciaActual ;
+                //sumaPotencias +=  numeroPotencias;
             }
-            (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML +=  "</br>"+ "The current speed is " +  sumaPotencias + "</br>";     
+            (<HTMLInputElement>document.getElementById("infoRockets")).innerHTML +=  "</br>"+ "The current speed is " +  arrayCoets[i].velocitat() + "</br>";     
         }
     }
 }

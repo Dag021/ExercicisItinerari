@@ -5,7 +5,7 @@ var Coet = /** @class */ (function () {
         this.codi = codi;
         this.numPropulsors = numPropulsors;
     }
-    Coet.prototype.addWheel = function (propulsor) {
+    Coet.prototype.addPropulsor = function (propulsor) {
         this.propulsors.push(propulsor);
     };
     return Coet;
