@@ -200,7 +200,7 @@ section #contactForm .centerInput{
     align-items: center;
     padding: 10px;
 }
-section #contactForm #infoType, section #contactForm #infoCategory, section #contactForm #infoCategory{
+* select, section #contactForm #infoType, section #contactForm #infoCategory, section #contactForm #infoStyle{
     cursor: pointer;
 }
 section #contactForm .centerInputFlag{
