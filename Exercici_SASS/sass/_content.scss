@@ -1,0 +1,83 @@
+.col1 .content {
+    background: $colorBlock1;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    -webkit-animation-name: col1;
+            animation-name: col1;
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+}
+.col2 .content {
+    background: $colorBlock2;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    -webkit-animation-name: col2;
+            animation-name: col2;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+}
+.col3 .content {
+    background: $colorBlock3;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+    -webkit-animation-name: col3;
+            animation-name: col3;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+}
+.col4 .content {
+    background: $colorBlock4;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    -webkit-animation-name: col4;
+            animation-name: col4;
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+}
+.col5 .content {
+    background: $colorBlock5;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+    -webkit-animation-name: col5;
+            animation-name: col5;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+}
+.row .content {
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.row .content:hover:before {
+    -webkit-transform: skew(0deg) scale(3) translate(0, 0);
+            transform: skew(0deg) scale(3) translate(0, 0);
+    opacity: 0.1;
+}
+.row .content:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.05;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transform: skew(30deg) scaleY(1) translate(0, 0);
+            transform: skew(30deg) scaleY(1) translate(0, 0);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}

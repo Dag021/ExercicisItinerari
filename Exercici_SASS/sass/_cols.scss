@@ -1,0 +1,25 @@
+.col {
+    position: absolute;
+    width: calc(20% - 5px);
+    height: calc(100% - 5px);
+    overflow: hidden;
+    margin: 2.5px;
+    cursor: pointer;
+    will-change: width, left, z-index, height;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .col1 {
+    left: 0;
+  }
+  .col2 {
+    left: 20vw;
+  }
+  .col3 {
+    left: 40vw;
+  }
+  .col4 {
+    left: 60vw;
+  }
+  .col5 {
+    left: 80vw;
+  }
